@@ -64,4 +64,4 @@ for subp in ${subprojects[@]}; do
 done
 
 # Add DNS to hosts file
-sed -i echo "127.0.0.1 inventory-management.com" >> /etc/hosts
+# sed -i echo "127.0.0.1 inventory-management.com" >> /etc/hosts

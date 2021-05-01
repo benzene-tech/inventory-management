@@ -2,11 +2,11 @@
 
 Inventory Management is a headless inventory management platform built on Node.js, React.js and Kubernetes.
 
-## Getting Started
+# Getting Started
 
 Follow the steps below to initialize the development platform on your local system.
 
-### Software Dependencies
+## Software Dependencies
 
 - [Node.js](https://nodejs.org/)
 - [Yarn](https://yarnpkg.com/)
@@ -15,7 +15,7 @@ Follow the steps below to initialize the development platform on your local syst
 - [Ingress NGINX](https://kubernetes.github.io/ingress-nginx/)
 - [Skaffold](https://skaffold.dev)
 
-### Setting up the Development Platform
+## Setting up the Development Platform
 
 Clone the repository in your local machine.
 

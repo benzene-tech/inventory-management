@@ -107,3 +107,6 @@ dist
 .DS_Store
 .idea
 .vs_code
+
+/*/
+!kubernetes

@@ -1,0 +1,67 @@
+#!/bin/bash
+
+# Subprojects list
+subprojects=(
+    auth
+    products
+    client
+)
+
+# Docker Credentials
+docker_username=avidyarth
+
+# Check Software Dependencies
+# Node.js
+if command node -v >/dev/null; then
+    echo "node:$(node -v) found on system"
+else
+    echo "node not installed on system"
+    exit
+fi
+
+# Yarn
+if command yarn -v >/dev/null; then
+    echo "yarn:$(node -v) found on system"
+else
+    echo "yarn not installed on system"
+    exit
+fi
+
+# Docker
+if command docker -v >/dev/null; then
+    echo "docker:$(docker -v) found on system"
+else
+    echo "docker not installed on system"
+    exit
+fi
+
+Kubectl
+if command kubectl version>/dev/null ; then
+    echo "kubectl: $(kubectl version --short) found on system"
+else
+    echo "kubectl not installed on system"
+    exit
+fi
+
+# Skaffold
+if command skaffold version >/dev/null; then
+    echo "skaffold:$(skaffold version) found on system"
+else
+    echo "skaffold not installed on system"
+    exit
+fi
+
+# Fetch and build Subprojects
+for subp in ${subprojects[@]}; do
+    # Fetch Git Repository    
+    command git clone https://github.com/benzene-tech/inventory-management-$subp.git $subp
+    # Build Project
+    command cd $subp && yarn install
+    # Pull Latest Build tofrom Docker Hub
+    command docker pull $docker_username/inventory-management-$subp
+    # Change Working Directory to Main Repo
+    command cd ..
+done
+
+# Add DNS to hosts file
+sed -i echo "127.0.0.1 inventory-management.com" >> /etc/hosts

@@ -1,0 +1,34 @@
+apiVersion: skaffold/v2beta10
+kind: Config
+deploy:
+  kubectl:
+    manifests:
+      - ./kubernetes/*
+build:
+  local:
+    push: false
+  artifacts:
+    - image: avidyarth/inventory-management-client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*[.js, .jsx]"
+            dest: .
+    - image: avidyarth/inventory-management-auth
+      context: auth
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.js"
+            dest: .
+    - image: avidyarth/inventory-management-products
+      context: products
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.js"
+            dest: .

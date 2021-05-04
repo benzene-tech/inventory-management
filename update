@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Subprojects list
+subprojects=(
+    auth
+    products
+    client
+)
+
+# Update Main Repository
+command git pull https://github.com/benzene-tech/inventory-management.git
+
+for subp in ${subprojects[@]}; do
+    command cd $subp
+    # Update Git Repository    
+    command git pull https://github.com/benzene-tech/inventory-management-$subp.git $subp
+    # Build Project
+    # Change Working Directory to Main Repo
+    command cd ..
+done

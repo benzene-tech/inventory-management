@@ -19,7 +19,7 @@ build:
     - image: avidyarth/inventory-management-auth
       context: auth
       docker:
-        dockerfile: Dockerfile
+        dockerfile: Dockerfile.dev
       sync:
         manual:
           - src: "src/**/*.js"
@@ -27,7 +27,7 @@ build:
     - image: avidyarth/inventory-management-products
       context: products
       docker:
-        dockerfile: Dockerfile
+        dockerfile: Dockerfile.dev
       sync:
         manual:
           - src: "src/**/*.js"

@@ -11,7 +11,7 @@ build:
     - image: avidyarth/inventory-management-client
       context: client
       docker:
-        dockerfile: Dockerfile
+        dockerfile: Dockerfile.dev
       sync:
         manual:
           - src: "src/**/*[.js, .jsx]"

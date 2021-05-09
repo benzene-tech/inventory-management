@@ -5,6 +5,7 @@ subprojects=(
     auth
     products
     client
+    core
 )
 
 # Update Main Repository

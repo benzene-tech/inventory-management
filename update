@@ -4,6 +4,7 @@
 subprojects=(
     auth
     products
+    users
     client
     core
 )

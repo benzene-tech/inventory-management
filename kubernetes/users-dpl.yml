@@ -1,30 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: products-dpl
+  name: users-dpl
 spec:
   selector:
     matchLabels:
-      app: products
+      app: users
   template:
     metadata:
       labels:
-        app: products
+        app: users
     spec:
       containers:
-        - name: products
-          image: avidyarth/inventory-management-products
+        - name: users
+          image: avidyarth/inventory-management-users
           env:
             - name: MONGO_URI
-              value: "mongodb://products-mongo-svc:27017/products"
+              value: "mongodb://users-mongo-svc:27017/users"
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: products-svc
+  name: users-svc
 spec:
   selector:
-    app: products
+    app: users
   ports:
     - port: 3000
       targetPort: 3000

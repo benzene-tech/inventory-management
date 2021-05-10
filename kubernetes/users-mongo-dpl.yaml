@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: users-mongo-dpl
+spec:
+  selector:
+    matchLabels:
+      app: users-mongo
+  template:
+    metadata:
+      labels:
+        app: users-mongo
+    spec:
+      containers:
+        - name: users-mongo
+          image: mongo
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: users-mongo-svc
+spec:
+  selector:
+    app: users-mongo
+  ports:
+    - port: 27017
+      targetPort: 27017

@@ -12,9 +12,14 @@ subprojects=(
 command git pull https://github.com/benzene-tech/inventory-management.git
 
 for subp in ${subprojects[@]}; do
-    command cd $subp
-    # Update Git Repository
-    command git pull https://github.com/benzene-tech/inventory-management-$subp.git
+    if command cd $subp > /dev/null 2>&1; then
+        # Update Git Repository
+        command git pull https://github.com/benzene-tech/inventory-management-$subp.git
+    else
+        # Clone Git Repository
+        command git clone https://github.com/benzene-tech/inventory-management-$subp.git $subp
+    fi
+
     # Build Project
     # Change Working Directory to Main Repo
     command cd ..

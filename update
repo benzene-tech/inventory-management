@@ -18,12 +18,12 @@ for subp in ${subprojects[@]}; do
         # Update Git Repository
         command git pull https://github.com/benzene-tech/inventory-management-$subp.git
         command git fetch
+        
+        # Build Project
+        # Change Working Directory to Main Repo
+        command cd ..
     else
         # Clone Git Repository
         command git clone https://github.com/benzene-tech/inventory-management-$subp.git $subp
     fi
-
-    # Build Project
-    # Change Working Directory to Main Repo
-    command cd ..
 done

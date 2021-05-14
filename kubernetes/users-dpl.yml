@@ -17,6 +17,8 @@ spec:
           env:
             - name: MONGO_URI
               value: "mongodb://users-mongo-svc:27017/users"
+            - name: RABBITMQ_URI
+              value: "amqp://rabbitmq-svc:5672"
 ---
 apiVersion: v1
 kind: Service

@@ -27,6 +27,13 @@ spec:
                 name: products-svc
                 port:
                   number: 3000
+          - path: /api/users/?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: users-svc
+                port:
+                  number: 3000
           - path: /?(.*)
             pathType: Prefix
             backend:

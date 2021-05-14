@@ -10,20 +10,18 @@ subprojects=(
 )
 
 # Update Main Repository
-command git pull https://github.com/benzene-tech/inventory-management.git
-command git fetch
+command git pull origin main
 
 for subp in ${subprojects[@]}; do
     if command cd $subp > /dev/null 2>&1; then
         # Update Git Repository
-        command git pull https://github.com/benzene-tech/inventory-management-$subp.git
-        command git fetch
+        command git pull origin main
         
         # Build Project
         # Change Working Directory to Main Repo
         command cd ..
     else
         # Clone Git Repository
-        command git clone https://github.com/benzene-tech/inventory-management-$subp.git $subp
+        command git clone --single-branch https://github.com/benzene-tech/inventory-management-$subp.git $subp
     fi
 done

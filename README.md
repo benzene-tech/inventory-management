@@ -48,3 +48,5 @@ Run the development cluster with
 ```sh
 skaffold dev
 ```
+kubectl create secret generic jwt-secret --from-literal=JWT_SECRET=dptUHjXVkKB2TdPy4ZmbPdC2GqTDHQW5
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.46.0/deploy/static/provider/cloud/deploy.yaml

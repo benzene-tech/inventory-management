@@ -37,7 +37,7 @@ else
     exit
 fi
 
-Kubectl
+#Kubectl
 if command kubectl version>/dev/null ; then
     echo "kubectl: $(kubectl version --short) found on system"
 else

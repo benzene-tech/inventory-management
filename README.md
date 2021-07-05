@@ -193,7 +193,7 @@ $IPv4Address inventory-management.com
 
 Add JWT-Secret using
 ```sh
-kubectl create secret generic jwt-secret --from-literal=JWT_SECRET=dptUHjXVkKB2TdPy4ZmbPdC2GqTDHQW5
+kubectl create secret generic jwt-secret --from-literal=JWT_SECRET=YOUR_JWT_SECRET
 ```
 
 Run the development cluster with

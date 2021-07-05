@@ -52,7 +52,7 @@ Append the below snippet to the file.
 Add JWT-Secret using
 
 ```sh
-kubectl create secret generic jwt-secret --from-literal=JWT_SECRET=dptUHjXVkKB2TdPy4ZmbPdC2GqTDHQW5
+kubectl create secret generic jwt-secret --from-literal=JWT_SECRET=YOUR_JWT_SECRET
 ```
 
 Create Ingress Resource using

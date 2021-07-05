@@ -2,6 +2,12 @@
 
 Inventory Management is a headless inventory management platform built on Node.js, React.js and Kubernetes.
 
+The repositories for each individual services is listed below
+- [Auth](https://github.com/benzene-tech/inventory-management-auth)
+- [Client](https://github.com/benzene-tech/inventory-management-client)
+- [Users](https://github.com/benzene-tech/inventory-management-users)
+- [Products](https://github.com/benzene-tech/inventory-management-products)
+
 # Getting Started
 
 Follow the steps below to initialize the development platform on your local system.

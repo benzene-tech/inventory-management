@@ -2,6 +2,25 @@
 
 Inventory Management is a headless inventory management platform built on Node.js, React.js and Kubernetes.
 
+# Demo
+
+Here are some screenshots of the application.
+
+![login](static/login.png)
+<figcaption>Login page</figcaption>
+
+![category](static/category-add.png)
+<figcaption>Adding category</figcaption>
+
+![product](static/product.png)
+<figcaption>Product page</figcaption>
+
+![profile](static/profile.png)
+<figcaption>Profile page</figcaption>
+
+![user](static/add-user.png)
+<figcaption>Adding new user</figcaption>
+
 # Getting Started
 
 Follow the steps below to initialize the development platform on your local system.

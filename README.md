@@ -2,6 +2,12 @@
 
 Inventory Management is a headless inventory management platform built on Node.js, React.js and Kubernetes.
 
+The repositories for each individual services is listed below
+- [Auth](https://github.com/benzene-tech/inventory-management-auth)
+- [Client](https://github.com/benzene-tech/inventory-management-client)
+- [Users](https://github.com/benzene-tech/inventory-management-users)
+- [Products](https://github.com/benzene-tech/inventory-management-products)
+
 # Demo
 
 Here are some screenshots of the application.
@@ -65,7 +71,7 @@ Append the below snippet to the file.
 Add JWT-Secret using
 
 ```sh
-kubectl create secret generic jwt-secret --from-literal=JWT_SECRET=dptUHjXVkKB2TdPy4ZmbPdC2GqTDHQW5
+kubectl create secret generic jwt-secret --from-literal=JWT_SECRET=YOUR_JWT_SECRET
 ```
 
 Create Ingress Resource using
@@ -206,7 +212,7 @@ $IPv4Address inventory-management.com
 
 Add JWT-Secret using
 ```sh
-kubectl create secret generic jwt-secret --from-literal=JWT_SECRET=dptUHjXVkKB2TdPy4ZmbPdC2GqTDHQW5
+kubectl create secret generic jwt-secret --from-literal=JWT_SECRET=YOUR_JWT_SECRET
 ```
 
 Run the development cluster with

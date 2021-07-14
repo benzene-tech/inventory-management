@@ -12,20 +12,26 @@ The repositories for each individual services is listed below
 
 Here are some screenshots of the application.
 
+<center><figcaption>Login page</figcaption></center>
+
 ![login](static/login.png)
-<figcaption>Login page</figcaption>
+
+<center><figcaption>Adding category</figcaption></center>
 
 ![category](static/category-add.png)
-<figcaption>Adding category</figcaption>
+
+<center><figcaption>Product page</figcaption></center>
 
 ![product](static/product.png)
-<figcaption>Product page</figcaption>
+
+<center><figcaption>Profile page</figcaption></center>
 
 ![profile](static/profile.png)
-<figcaption>Profile page</figcaption>
+
+
+<center><figcaption>Adding new user</figcaption></center>
 
 ![user](static/add-user.png)
-<figcaption>Adding new user</figcaption>
 
 # Getting Started
 
